@@ -182,16 +182,19 @@ function setup() {
   buttonAlpha.position(spacer, spacer * 2.5);
   buttonAlpha.mousePressed(switchAlpha);
   buttonAlpha.style('z-index', '2');
+  buttonAlpha.class('organizer');
 
   buttonChron = createButton("Chronological")
   buttonChron.position(spacer, spacer * 3);
   buttonChron.mousePressed(switchChron);
   buttonChron.style('z-index', '3');
+  buttonChron.class('organizer');
 
   buttonType = createButton("Type")
   buttonType.position(spacer, spacer * 3.5);
   buttonType.mousePressed(switchType);
   buttonType.style('z-index', '4');
+  buttonType.class('organizer');
 
   //Icon constructor
   for (i = 0; i < img.length; i++) {
@@ -212,6 +215,7 @@ function setup() {
   test.style('display','block');
   test.style('margin-left','auto');
   test.style('margin-right','auto');
+  test.class('chunk');
 //  test.style('width','70%');
 
   test.style('max-width','1000px');
