@@ -17,7 +17,7 @@
 //Global Variables
 //********************************************************
 
-
+var offset;
 
 var touched = 0;
 
@@ -182,19 +182,25 @@ function setup() {
   buttonAlpha.position(spacer, spacer * 2.5);
   buttonAlpha.mousePressed(switchAlpha);
   buttonAlpha.style('z-index', '2');
-  buttonAlpha.class('organizer');
+  buttonAlpha.class('organizer buttselect');
+  buttonAlpha.id('alpha');
 
   buttonChron = createButton("Chronological")
   buttonChron.position(spacer, spacer * 3);
   buttonChron.mousePressed(switchChron);
   buttonChron.style('z-index', '3');
   buttonChron.class('organizer');
+  buttonChron.id('chrono');
 
   buttonType = createButton("Type")
   buttonType.position(spacer, spacer * 3.5);
   buttonType.mousePressed(switchType);
   buttonType.style('z-index', '4');
   buttonType.class('organizer');
+  buttonType.id('type');
+
+
+
 
   //Icon constructor
   for (i = 0; i < img.length; i++) {
@@ -212,14 +218,15 @@ function setup() {
   //Chunk Image
   test = createImg('hello.png');
   test.style('z-index', '1');
-  test.style('display','block');
-  test.style('margin-left','auto');
-  test.style('margin-right','auto');
+  // test.style('display','block');
+  test.style('position','absolute');
   test.class('chunk');
-//  test.style('width','70%');
-
-  test.style('max-width','1000px');
+  test.style('width','1000px');
   test.style('padding-top', '275px');
+
+
+
+
 
 
 
@@ -230,7 +237,7 @@ function setup() {
   twitter.position(width - 100, 0.75 * spacer);
 
   // tumblr = createDiv("<a href='http://cosmicnarratives.tumblr.com/'><img src='images/tumblr.png'/></a>");
-  // tumblr.position(width - 150, 0.75 * spacer);
+  // tumblr.position(width - 250, 0.75 * spacer);
 
   github = createDiv("<a href='https://github.com/RyanErbert'><img src='images/github.png'/></a>");
   github.position(width - 150, 0.75 * spacer);
@@ -248,6 +255,10 @@ function setup() {
 
 function draw() {
   clear();
+
+  //move background image depending on window width
+  offset = (windowWidth/2) - 500 + 'px';
+  test.style('left',offset);
 
   var fociXnew = [];
   var fociYnew = [];
@@ -437,10 +448,12 @@ document.body.style.backgroundColor = 'black';
 //FUNCTIONS
 //********************************************************
 
-
-
-
 function switchAlpha() {
+
+  buttonAlpha.class('organizer buttselect');
+  buttonChron.class("organizer");
+  buttonType.class("organizer");
+
   for (i = 0; i < img.length; i++) {
     anchorX[i] = (xPosAlpha[i] * spacer) + spacer * 3;
     anchorY[i] = (yPosAlpha[i] * spacer) + spacer;
@@ -452,6 +465,11 @@ function switchAlpha() {
 }
 
 function switchChron() {
+
+  buttonAlpha.class('organizer');
+  buttonChron.class("organizer buttselect");
+  buttonType.class("organizer");
+
   for (i = 0; i < img.length; i++) {
     anchorX[i] = (xPosChron[i] * spacer) + spacer * 3;
     anchorY[i] = (yPosChron[i] * spacer) + spacer;
@@ -464,6 +482,11 @@ function switchChron() {
 
 
 function switchType() {
+
+  buttonAlpha.class('organizer');
+  buttonChron.class("organizer");
+  buttonType.class("organizer buttselect");
+
   for (i = 0; i < img.length; i++) {
     anchorX[i] = (xPosType[i] * spacer) + spacer * 3;
     anchorY[i] = (yPosType[i] * spacer) + spacer;
