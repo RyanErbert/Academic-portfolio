@@ -39,13 +39,13 @@ a:visited {
 
 .imgwidth {
 
-  padding-left: 10em;
+  padding-left: 5em;
   width: 40%;
 }
 
 .textwidth {
-  text-align: center;
-  padding-right: 10em;
+  text-align: right;
+  padding-right: 5em;
   width: 100%;
 }
 
