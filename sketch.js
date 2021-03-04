@@ -24,7 +24,7 @@ var touched = 0;
 var coord = [];
 var spacer = 65;
 var canvas;
-var twitter, tumblr, linkedin;
+var twitter, tumblr, linkedin, github;
 
 var t = 0;
 var u = 0;
@@ -64,7 +64,7 @@ url[4] = "http://ryanerbert.com/portl";
 url[5] = "http://ryanerbert.com/poprocks";
 url[6] = "http://ryanerbert.com/hudson";
 url[7] = "http://ryanerbert.com/portfolio";
-url[8] = "http://ryanerbert.com/web";
+url[8] = "https://github.com/RyanErbert/Academic-portfolio";
 
 
 //Color variables
@@ -229,13 +229,16 @@ function setup() {
   twitter = createDiv("<a href='https://twitter.com/McToady'><img src='images/twitter.png'/></a>");
   twitter.position(width - 100, 0.75 * spacer);
 
-  tumblr = createDiv("<a href='http://cosmicnarratives.tumblr.com/'><img src='images/tumblr.png'/></a>");
-  tumblr.position(width - 150, 0.75 * spacer);
+  // tumblr = createDiv("<a href='http://cosmicnarratives.tumblr.com/'><img src='images/tumblr.png'/></a>");
+  // tumblr.position(width - 150, 0.75 * spacer);
+
+  github = createDiv("<a href='https://github.com/RyanErbert'><img src='images/github.png'/></a>");
+  github.position(width - 150, 0.75 * spacer);
 
   linkedin = createDiv("<a href='https://www.linkedin.com/pub/ryan-erbert/107/186/a63'><img src='images/linkedin.png'/></a>");
   linkedin.position(width - 200, 0.75 * spacer);
 
-  var logo = createDiv("<a href='http://ryanerbert.com/about'><img src='images/logo.png'/></a>");
+  var logo = createDiv("<a href='https://github.com/RyanErbert/Academic-portfolio'><img src='images/logo.png'/></a>");
   logo.position(spacer, 0.75 * spacer);
 }
 
@@ -402,7 +405,9 @@ document.body.style.backgroundColor = 'black';
 
   linkedin.position(windowWidth - 200, 0.75 * spacer);
   twitter.position(windowWidth - 100, 0.75 * spacer);
-  tumblr.position(windowWidth - 150, 0.75 * spacer);
+  // tumblr.position(windowWidth - 150, 0.75 * spacer);
+  github.position(windowWidth - 150, 0.75 * spacer);
+
 
 
   //begin fuckery
