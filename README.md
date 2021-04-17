@@ -2,7 +2,7 @@
 
 a compilation of my works from my time as an undergrad at the UH COA. This site can be viewed live at ![ryanerbert.com](ryanerbert.com)
 
-***
+**note: this app was intended to be expanded upon with professional works, but due to the corruption of my external backup drive, I no longer have access to many of the graphic files needed to do so**
 
 > This project was physically started in 2015, planned out in concept much earlier, within the duration of my time at the University of Houston College of Architecture. After applying for an independent study course with Professor Michael Gonzales, I spent a semester focusing on learning basic programming as a means for marketing architectural concepts. the final product, in my eyes, was a project that laid the groundwork for this site you are looking at now.
 >
@@ -14,7 +14,8 @@ a compilation of my works from my time as an undergrad at the UH COA. This site 
 
 ## TODO:
 
-- [ ] test
-- [x] test
+- turn into isngle page web app
+- register hover areas on image
+- consider other libraries that are more responsive to window sizes
 
 
